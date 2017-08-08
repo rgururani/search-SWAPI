@@ -21,9 +21,8 @@ class SearchPage extends React.Component {
   }
 
   componentWillMount(){
-    debugger;
     this.props.actions.getUser();
-    setInterval(()=>{this.setState({searchCount: 0})},60000);
+    setInterval(()=>{this.setState({searchCount: 0});},60000);
   }
 
   getpalnetrow(planet){
@@ -38,7 +37,7 @@ class SearchPage extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   onChange(event) {
@@ -46,7 +45,7 @@ class SearchPage extends React.Component {
     let user = this.props.user;
     if (user == 'Luke Skywalker' || searchTime < 16) {
       searchTime = searchTime+1;
-      this.setState({searchCount: searchTime})
+      this.setState({searchCount: searchTime});
 
       this.setState({planet: event.target.value});
       this.props.actions.loadplanet(event.target.value)
@@ -60,7 +59,6 @@ class SearchPage extends React.Component {
   }
 
   render() {
-    debugger;
     const planets = this.props.planets;
 
     return (
@@ -114,13 +112,8 @@ class SearchPage extends React.Component {
                         <div className="col-lg-2 col-sm-12">
                           <a href="#" className="btn btn-sm btn-default">population <span>{planet.population}</span></a>
                         </div>
-                        <div className="col-lg-2 col-sm-12">
-
-
-                        </div>
-                        <div className="col-lg-2 col-sm-12">
-
-                        </div>
+                        <div className="col-lg-2 col-sm-12" />
+                        <div className="col-lg-2 col-sm-12" />
                         <div className="col-lg-4 col-sm-12">
                           <div className="col-sm-12 col-lg-2">
                             <a href="#" className="btn btn-sm">films</a>
@@ -135,7 +128,7 @@ class SearchPage extends React.Component {
                     </div>
                   </div>
                 </div>
-              )
+              );
             })
             }
           </div>
@@ -169,7 +162,7 @@ function mapDispatchToProps(dispatch) {
 
     // ... other custom mapped dispatch functions ...
     loadPlanets: (myParam) => {
-    dispatch({ type: types.Planet_FETCH_SUCCESS, myParam})
+    dispatch({ type: types.Planet_FETCH_SUCCESS, myParam});
   },
   };
 }

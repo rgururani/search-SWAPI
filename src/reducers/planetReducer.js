@@ -1,5 +1,4 @@
 import {Planet_FETCH_SUCCESS} from '../constants/actionTypes';
-import objectAssign from 'object-assign';
 import initialState from './initialState';
 
 export default function planetReducer(state = initialState.planets, action) {

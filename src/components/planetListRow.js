@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Circle} from 'react-shapes';
 
-const planetListRow = ({key, name}) => {
-  debugger;
+const planetListRow = ({key, name , films}) => {
   return (
     <div id={key}>
       <div className="well container">
@@ -19,13 +18,8 @@ const planetListRow = ({key, name}) => {
             <div className="col-lg-2 col-sm-12">
               <a href="#" className="btn btn-sm btn-default">population <span>{1000}</span></a>
             </div>
-            <div className="col-lg-2 col-sm-12">
-
-
-            </div>
-            <div className="col-lg-2 col-sm-12">
-
-            </div>
+            <div className="col-lg-2 col-sm-12" />
+            <div className="col-lg-2 col-sm-12" />
             <div className="col-lg-4 col-sm-12">
               <div className="col-sm-12 col-lg-2">
                 <a href="#" className="btn btn-sm">films</a>
@@ -44,7 +38,8 @@ const planetListRow = ({key, name}) => {
 };
 
 planetListRow.propTypes = {
-  planets: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  films: PropTypes.array.isRequired,
   key: PropTypes.string.isRequired
 };
 

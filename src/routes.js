@@ -5,7 +5,7 @@ import App from './components/App';
 import NotFoundPage from './components/NotFoundPage';
 import LoginPage from './components/LoginPage';
 import SearchPage from './components/SearchPage';
-import {requireAuth} from './utils/checkuser'
+import {requireAuth} from './utils/checkuser';
 
 
 export default function createRoutes(store){
